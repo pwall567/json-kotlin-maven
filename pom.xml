@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>net.pwall.json</groupId>
+  <artifactId>json-kotlin-maven</artifactId>
+  <version>0.66</version>
+  <name>JSON Schema code generation plugin</name>
+  <description>Maven code generation plugin for JSON Schema</description>
+  <packaging>maven-plugin</packaging>
+  <url>https://github.com/pwall567/json-kotlin-maven</url>
+
+  <parent>
+    <groupId>net.pwall.maven</groupId>
+    <artifactId>maven-kotlin</artifactId>
+    <version>3.0</version>
+  </parent>
+
+  <properties>
+    <java.version>1.8</java.version>
+  </properties>
+
+  <licenses>
+    <license>
+      <name>The MIT License (MIT)</name>
+      <url>http://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git://github.com/pwall567/json-kotlin-maven.git</connection>
+    <url>https://github.com/pwall567/json-kotlin-maven</url>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>pwall@pwall.net</id>
+      <name>Peter Wall</name>
+      <email>pwall@pwall.net</email>
+      <url>https://pwall.net</url>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>Australia/Sydney</timezone>
+    </developer>
+  </developers>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>central</id>
+      <name>Maven Central</name>
+      <url>https://repo1.maven.org/maven2/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>net.pwall.json</groupId>
+      <artifactId>json-kotlin-schema-codegen</artifactId>
+      <version>0.66</version>
+    </dependency>
+    <dependency>
+      <groupId>net.pwall.json</groupId>
+      <artifactId>json-kotlin-schema</artifactId>
+      <version>0.31</version>
+    </dependency>
+    <dependency>
+      <groupId>net.pwall.json</groupId>
+      <artifactId>json-pointer</artifactId>
+      <version>2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>3.8.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugin-tools</groupId>
+      <artifactId>maven-plugin-annotations</artifactId>
+      <version>3.6.2</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib-jdk8</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <sourceDirectory>src/main/kotlin</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>3.6.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.jetbrains.kotlin</groupId>
+        <artifactId>kotlin-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.jetbrains.dokka</groupId>
+        <artifactId>dokka-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
