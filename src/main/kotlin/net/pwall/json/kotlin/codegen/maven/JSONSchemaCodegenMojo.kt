@@ -35,7 +35,6 @@ import org.apache.maven.plugins.annotations.Mojo
 import net.pwall.json.pointer.JSONPointer
 import net.pwall.json.schema.codegen.CodeGenerator
 import net.pwall.json.schema.codegen.TargetLanguage
-import net.pwall.json.schema.parser.Parser
 
 @Mojo(name = "codegen", defaultPhase = LifecyclePhase.GENERATE_SOURCES)
 class JSONSchemaCodegenMojo : AbstractMojo() {
@@ -63,7 +62,7 @@ class JSONSchemaCodegenMojo : AbstractMojo() {
 
     override fun execute() {
         CodeGenerator().apply {
-            val parser = schemaParser ?: Parser().also { schemaParser = it }
+            val parser = schemaParser
             val config = configFile ?: File("src/main/resources/codegen-config.json").takeIf { it.exists() }
             config?.let { configure(it) }
             packageName?.let { basePackageName = it }
