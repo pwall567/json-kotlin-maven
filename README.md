@@ -33,7 +33,7 @@ Then, in the plugins section:
       <plugin>
         <groupId>net.pwall.json</groupId>
         <artifactId>json-kotlin-maven</artifactId>
-        <version>0.82</version>
+        <version>0.83</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -69,7 +69,7 @@ customisation options, you may include a `configuration` section in the `plugin`
       <plugin>
         <groupId>net.pwall.json</groupId>
         <artifactId>json-kotlin-maven</artifactId>
-        <version>0.82</version>
+        <version>0.83</version>
         <configuration>
           <configFile>path/to/your/config.json</configFile>
           <inputFile>path/to/your/schema/file/or/files</inputFile>
@@ -171,4 +171,4 @@ This setting may be specified in the config file, and that is the recommended pr
 
 Peter Wall
 
-2022-07-20
+2022-10-16

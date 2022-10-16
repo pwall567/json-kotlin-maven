@@ -5,7 +5,7 @@
 
   <groupId>net.pwall.json</groupId>
   <artifactId>json-kotlin-maven</artifactId>
-  <version>0.82</version>
+  <version>0.83</version>
   <name>JSON Schema code generation plugin</name>
   <description>Maven code generation plugin for JSON Schema</description>
   <packaging>maven-plugin</packaging>
@@ -60,17 +60,17 @@
     <dependency>
       <groupId>net.pwall.json</groupId>
       <artifactId>json-kotlin-schema-codegen</artifactId>
-      <version>0.82</version>
+      <version>0.83</version>
     </dependency>
     <dependency>
       <groupId>net.pwall.json</groupId>
       <artifactId>json-kotlin-schema</artifactId>
-      <version>0.36</version>
+      <version>0.37</version>
     </dependency>
     <dependency>
       <groupId>net.pwall.json</groupId>
       <artifactId>json-pointer</artifactId>
-      <version>2.2</version>
+      <version>2.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.maven</groupId>
