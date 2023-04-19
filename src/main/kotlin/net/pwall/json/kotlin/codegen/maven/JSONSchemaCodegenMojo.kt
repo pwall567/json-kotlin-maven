@@ -2,7 +2,7 @@
  * @(#) JSONSchemaCodegenMojo.kt
  *
  * json-kotlin-maven  Maven Code Generation Plugin for JSON Schema
- * Copyright (c) 2021 Peter Wall
+ * Copyright (c) 2021, 2023 Peter Wall
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -34,6 +34,7 @@ import org.apache.maven.plugins.annotations.Mojo
 
 import net.pwall.json.pointer.JSONPointer
 import net.pwall.json.schema.codegen.CodeGenerator
+import net.pwall.json.schema.codegen.TargetFileName
 import net.pwall.json.schema.codegen.TargetLanguage
 
 @Mojo(name = "codegen", defaultPhase = LifecyclePhase.GENERATE_SOURCES)
@@ -60,6 +61,9 @@ class JSONSchemaCodegenMojo : AbstractMojo() {
     @Parameter
     var pointer: String? = null
 
+    @Parameter
+    var indexFileName: String? = null
+
     override fun execute() {
         CodeGenerator().apply {
             val parser = schemaParser
@@ -70,6 +74,12 @@ class JSONSchemaCodegenMojo : AbstractMojo() {
             val output = outputDir ?: File("target/generated-sources/${targetLanguage.directory()}")
             baseDirectoryName = output.path
             comment?.let { generatorComment = it }
+            this@JSONSchemaCodegenMojo.indexFileName?.let {
+                indexFileName = if (it.contains('.'))
+                    TargetFileName(it.substringBefore('.'), it.substringAfter('.'))
+                else
+                    TargetFileName(it)
+            }
             val input = inputFile ?: File("src/main/resources/schema")
             pointer?.let {
                 generateAll(parser.jsonReader.readJSON(input), JSONPointer(it))
