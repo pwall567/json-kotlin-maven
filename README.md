@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/pwall567/json-kotlin-maven.svg?branch=main)](https://travis-ci.com/github/pwall567/json-kotlin-maven)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Kotlin](https://img.shields.io/static/v1?label=Kotlin&message=v1.6.10&color=7f52ff&logo=kotlin&logoColor=7f52ff)](https://github.com/JetBrains/kotlin/releases/tag/v1.6.10)
+[![Kotlin](https://img.shields.io/static/v1?label=Kotlin&message=v1.7.21&color=7f52ff&logo=kotlin&logoColor=7f52ff)](https://github.com/JetBrains/kotlin/releases/tag/v1.7.21)
 [![Maven Central](https://img.shields.io/maven-central/v/net.pwall.json/json-kotlin-maven?label=Maven%20Central)](https://search.maven.org/search?q=g:%22net.pwall.json%22%20AND%20a:%22json-kotlin-maven%22)
 
 Maven JSON Schema code generation plugin.
@@ -33,7 +33,7 @@ Then, in the plugins section:
       <plugin>
         <groupId>net.pwall.json</groupId>
         <artifactId>json-kotlin-maven</artifactId>
-        <version>0.90</version>
+        <version>0.91</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -69,7 +69,7 @@ customisation options, you may include a `configuration` section in the `plugin`
       <plugin>
         <groupId>net.pwall.json</groupId>
         <artifactId>json-kotlin-maven</artifactId>
-        <version>0.90</version>
+        <version>0.91</version>
         <configuration>
           <configFile>path/to/your/config.json</configFile>
           <inputFile>path/to/your/schema/file/or/files</inputFile>
@@ -171,4 +171,4 @@ This setting may be specified in the config file, and that is the recommended pr
 
 Peter Wall
 
-2023-04-19
+2023-07-10
