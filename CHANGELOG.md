@@ -8,6 +8,10 @@ plugin.
 
 ## [0.100] - 2024-02-09
 ### Changed
+- `pom.xml`: Updated version of `json-kotlin-schema-codegen`
+
+## [0.100] - 2024-02-09
+### Changed
 - `pom.xml`: Updated versions of `json-kotlin-schema` and `json-kotlin-schema-codegen`
 
 ## [0.99] - 2023-12-13
