@@ -32,7 +32,7 @@ import org.apache.maven.plugins.annotations.Parameter
 import org.apache.maven.plugins.annotations.LifecyclePhase
 import org.apache.maven.plugins.annotations.Mojo
 
-import net.pwall.json.pointer.JSONPointer
+import io.kjson.pointer.JSONPointer
 import net.pwall.json.schema.codegen.CodeGenerator
 import net.pwall.json.schema.codegen.TargetFileName
 import net.pwall.json.schema.codegen.TargetLanguage
