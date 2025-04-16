@@ -6,6 +6,10 @@ The major and minor version numbers of this repository (but not patch numbers) m
 [`json-kotlin-schema-codegen`](https://github.com/pwall567/json-kotlin-schema-codegen) library used by this Gradle
 plugin.
 
+## [0.120] - 2025-04-17
+### Changed
+- `pom.xml`: Updated version of `json-kotlin-schema-codegen`
+
 ## [0.119] - 2025-04-13
 ### Changed
 - `pom.xml`: Updated version of `json-kotlin-schema-codegen`
